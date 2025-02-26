@@ -22,7 +22,7 @@ const projects = [
     description:
       "A weather application that uses a third-party API to fetch weather data based on user location. Built with React and styled-components.",
     github: "https://github.com/yourusername/weather-app",
-    liveDemo: "https://weatherapp.com",
+    liveDemo: "https://github.com/Jabarsonrichardgs",
   },
   {
     title: " Task Manager (CRUD App)",
@@ -30,7 +30,7 @@ const projects = [
     description:
       "A task manager app with full CRUD functionality (Create, Read, Update, Delete). Built using React and local storage.",
     github: "https://github.com/yourusername/task-manager",
-    liveDemo: "https://taskmanager.com",
+    liveDemo: "https://github.com/Jabarsonrichardgs",
   },
   {
     title: " Education Courses Website",
@@ -38,7 +38,7 @@ const projects = [
     description:
       "An online platform of an institute where users and students can browse educational courses. Built with React.js.",
     github: "https://github.com/yourusername/education-courses",
-    liveDemo: "https://educationcourses.com",
+    liveDemo: "https://github.com/Jabarsonrichardgs",
   },
   {
     title: " Gym Website",
@@ -46,7 +46,7 @@ const projects = [
     description:
       "A gym website that allows users to view available gym classes, sign up, and manage their memberships. Built with React.js and styled-components.",
     github: "https://github.com/yourusername/gym-website",
-    liveDemo: "https://gymwebsite.com",
+    liveDemo: "https://github.com/Jabarsonrichardgs",
   },
   {
     title: "Book Cart",
@@ -54,7 +54,7 @@ const projects = [
     description:
       "A book cart app where users can browse books, add them to their cart, and proceed to checkout. Built with React and local storage for cart persistence.",
     github: "https://github.com/yourusername/book-cart",
-    liveDemo: "https://bookcart.com",
+    liveDemo: "https://github.com/Jabarsonrichardgs"
   },
 ];
 
