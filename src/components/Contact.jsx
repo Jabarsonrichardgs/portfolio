@@ -10,12 +10,13 @@ const Contact = () => {
 
     emailjs
       .sendForm('service_fd9bf87', 'template_nd88bcm', form.current, {
-        publicKey: 'R47jtwNXmSEqmj_6N',
+        publicKey: 'ZlpGRRxA5IK6zxKwm',
       })
       .then(
         () => {
           console.log('SUCCESS!');
           alert('Message sent successfully!');
+          form.current.reset(); 
         },
         (error) => {
           console.log('FAILED...', error.text);
