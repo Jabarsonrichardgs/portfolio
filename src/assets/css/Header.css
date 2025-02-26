@@ -1,0 +1,811 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+
+* {
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  transition: all 0.5s ease;
+}
+.head {
+  position: sticky;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 55px;
+  align-items: center;
+  list-style: none;
+  position: relative; /* Added for the relative positioning */
+}
+
+nav ul li {
+  position: relative; /* Needed for the underline effect */
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-Links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #08ff88; /* Underline color */
+  transition: width 0.3s ease; /* Smooth effect */
+  position: absolute;
+  left: 50%;
+  bottom: -10px; /* Position it below the text */
+  transform: translateX(-50%);
+}
+.nav-Links a:hover {
+  color: #7dffc0;
+  cursor: pointer;
+}
+.nav-Links a:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo span {
+  color: #08ff88;
+}
+
+button {
+  display: inline;
+  cursor: pointer;
+  padding: 0 30px;
+  height: 40px;
+  letter-spacing: 1px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px !important;
+  background-color: transparent;
+
+  border-color: #08ff88;
+  color: white;
+  font-weight: 500;
+  font-size: 14px !important;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  border: none;
+  background-color: #1eeaa2;
+  color: #fff;
+}
+.welcome-main {
+  margin-top: 40px;
+  background: #000000fc;
+  height: 100%;
+  display: flex;
+  box-shadow: 0 8px 12px black;
+  border-radius: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.download-btn {
+  background-color: transparent;
+  border-color: #08ff88;
+  padding: 0px 20px;
+}
+
+.welcome-page-content {
+  padding: 8% 5%;
+  width: 60%;
+}
+
+.welcome-page-content h1 {
+  font-size: 4rem;
+
+  margin-bottom: 50px;
+}
+.welcome-page-content h5 {
+  margin-bottom: 40px;
+}
+.name-text {
+  -webkit-text-stroke: 1px #08ff88;
+  color: transparent;
+}
+.colon {
+  -webkit-text-stroke: 1px #08ff88;
+  color: transparent;
+}
+.profile {
+  /* border: 1px solid white; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+}
+.profile img {
+  border: 1px solid #000000;
+  border-radius: 10%;
+  padding: 1em;
+  height: 300px;
+}
+.footer-container {
+  background-color: #000000;
+}
+.footer-head {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.footer {
+  padding-top: 40px;
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links .links:hover {
+  color: #08ff88 !important;
+}
+
+.resume-container {
+  display: flex;
+  align-items: center;
+}
+
+.download-btn {
+  margin-right: 15px;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+.social-icons svg {
+  transition: color 0.3s;
+}
+
+.social-icons a:hover svg {
+  color: #08ff88 !important;
+  transform: translateY(-5px);
+  transition: all 0.5s ease;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.contact-icon {
+  margin-right: 10px;
+  color: #d6d6d684;
+  transition: color 0.3s;
+}
+
+.contact-icon:hover {
+  color: #08ff88 !important;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    color: #d6d6d684;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items on smaller screens */
+  }
+}
+
+/* About Section */
+.about {
+  margin-top: 100px;
+  background: #000;
+  box-shadow: 0 0 5px 5px #0dae60;
+  border-radius: 1rem;
+  padding: 0;
+}
+.about-content {
+  display: flex;
+}
+.about-img {
+  width: 40%;
+  height: 350px;
+  overflow: hidden;
+}
+.about-me {
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  background-color: #2323239f;
+}
+
+.about-img img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #08ff88;
+}
+.about-me p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 1.5em;
+}
+.about-title {
+  width: 90%;
+  margin: auto;
+}
+.insta:hover {
+  background-color: #46fba4 !important;
+}
+/* About End */
+
+/* Project Start */
+#projects {
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 80px;
+  position: relative;
+}
+.projects h1 {
+  text-align: center;
+}
+.project-list {
+  display: flex;
+  z-index: 0 !important;
+}
+.pr-title::before {
+  content: "MY WORKS";
+  z-index: 0;
+  top: 0;
+  left: 25%;
+  position: absolute;
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+  font-size: 8rem;
+}
+.title {
+  letter-spacing: 0.5rem;
+  z-index: 2;
+  font-size: 3rem;
+}
+.title::after {
+  content: "";
+  display: block;
+  width: 100px; /* Adjust width of the line */
+  height: 3px; /* Adjust thickness of the line */
+  background-color: #08ff88; /* Match the color */
+  margin: 0 auto; /* Center the line */
+  margin-top: 20px;
+  border-radius: 2rem; /* Space between text and line */
+}
+
+.card-img-top {
+  border-radius: 0.25rem;
+  object-fit: cover;
+  padding: 1rem;
+  height: 200px;
+}
+
+.card {
+  box-shadow: 0 0 3px 0px #7aff99 !important;
+  background: #000000;
+  color: #fff;
+  border-radius: 1rem;
+  
+  transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+  border-radius: 2rem;
+  height: 100%;
+}
+.card:hover {
+  transform: scale(1.05);
+
+  cursor: pointer;
+
+  border: 1px solid #08ff88;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.p-btn {
+  width: 48%;
+  font-size: 0.9rem;
+  text-align: center;
+  color: white;
+  background-color: #232323;
+}
+
+.p-btn:hover {
+  border-color: #08ff88;
+  background-color: #191919;
+  color: #ffffff;
+}
+.git{
+  font-size: 1rem;
+}
+.git:hover {
+  color: #000 !important;
+}
+
+/* Projects End */
+
+/* SKills */
+.skill {
+ padding: 0;
+  border-radius: 1rem;
+  background-color: #000000;
+  box-shadow: 0 8px 12px black;
+}
+.skill-imge {
+  padding: 1.5rem;
+  
+}
+.skill-imge img {
+  box-shadow: 0 0 22px 2px #78ffce;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+.skils-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5rem;
+}
+
+.skills-images {
+
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  width: 100%;
+  justify-content: center;
+}
+.html-imge {
+  width: 18%;
+  height: 13rem;
+}
+.html-imge img {
+  background-color: #fdffff;
+  border-radius: 50%;
+  padding: 0.2rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+.html-imge img:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 1s ease;
+  box-shadow: 0 0 12px 4px #52ffa6;
+}
+.html-imge p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Education Css */
+.education-container {
+  margin-top: 100px;
+  width: 100%;
+  position: relative;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+  position: relative;
+  padding-top: 2rem;
+}
+.ed-title::before {
+  content: "EDUCATION";
+  z-index: 0;
+  top: -50px !important;
+  left: 22%;
+  position: absolute;
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+  font-size: 8rem;
+}
+.ed-title{
+  font-size: 2rem;
+}
+.edu-content {
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 3px 0px #7aff99;
+  background-color: #000000;
+}
+.edu-content h3 {
+  color: #08ff88;
+}
+.edu-content p {
+  text-align: justify;
+}
+.edu-content:nth-child(even) {
+  position: relative;
+  right: -100%;
+}
+.date {
+  color: #08ff88;
+}
+
+/* Contact Page */
+.contact-section {
+  margin-top: 100px;
+
+  position: relative;
+}
+.contact-title::before {
+  content: "CONTACT";
+  z-index: 0;
+  top: -40px !important;
+  left: 30%;
+  position: absolute;
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+  font-size: 7rem;
+}
+.contact-me h6 {
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  line-height: 2rem;
+}
+.contact-rest {
+
+  background: #1d1c1c;
+  display: flex;
+ 
+  box-shadow: 0 0 2px 2px #60f7a9;
+}
+.contact-left {
+  background-color: rgb(21, 21, 21);
+  margin: 2rem;
+  width: 40%;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px 2px black;
+}
+.contact-left p{
+  margin-top: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+.contact-right {
+  margin: 2rem;
+  width: 60%;
+}
+
+.contact-right input:focus {
+  border: 3px solid;
+  border-color: #61ffb3;
+}
+.contact-right textarea:focus {
+  border: 3px solid;
+  border-color: #61ffb3;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1024px) {
+  .pr-title::before {
+    content: "MY WORKS";
+    z-index: 0;
+    top: 0;
+    left: 12%;
+
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 8rem;
+  }
+  .html-imge {
+    width: 22%;
+    height: 10rem;
+  }
+
+  .ed-title::before {
+    content: "EDUCATION";
+    z-index: 0;
+    top: -50px !important;
+    left: 12%;
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 8rem;
+  }
+
+  .contact-title::before {
+    content: "CONTACT";
+    z-index: 0;
+    top: -40px !important;
+    left: 21%;
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 7rem;
+  }
+ 
+}
+
+/* 768px media query */
+
+@media screen and (max-width: 768px) {
+  .profile {
+    display: none;
+  }
+
+  .welcome-page-content {
+    width: 100%;
+  }
+  .welcome-main {
+    display: block;
+  }
+
+  .about-content {
+    display: block;
+  }
+  .about-img {
+    width: 100%;
+  }
+  .about-img img {
+    object-fit: cover;
+  }
+  .about-me {
+    width: 100%;
+  }
+  .pr-title::before {
+    content: "MY WORKS";
+    z-index: 0;
+    top: 1.5rem;
+    left: 18%;
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 5rem;
+  }
+  .p-btn {
+    width: 25%;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    background-color: #232323;
+  }
+  .html-imge {
+    width: 22%;
+    height: 7rem;
+  }
+  .ed-title::before {
+    content: "EDUCATION";
+    z-index: 0;
+    top: -27px !important;
+    left: 11%;
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 6rem;
+  }
+  .edu-content:nth-child(even) {
+    position: relative;
+    right: 0;
+  }
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    position: relative;
+    padding-top: 2rem;
+  }
+  .contact-title::before {
+    content: "CONTACT";
+    z-index: 0;
+    top: -30px !important;
+    left: 15%;
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 6rem;
+  }
+  .contact-rest{
+    margin: 0px !important;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+   
+    
+  }
+  .contact-left {
+   
+   
+    width: 90%;
+   
+    border-radius: 1rem;
+   
+  }
+  .contact-right{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .ed-title::before {
+    content: "EDUCATION";
+    z-index: 0;
+    top: -20px !important;
+    left: 0%;
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 4rem;
+  }
+  .pr-title::before {
+    content: "MY WORKS";
+    z-index: 0;
+    top: 1rem;
+    left: 5%;
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 5rem;
+  }
+  .contact-title::before {
+    content: "CONTACT";
+    z-index: 0;
+    top: -10px !important;
+    left: 7%;
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 4rem;
+  }
+  .contact-rest{
+    margin: 2px ;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+   
+    
+  }
+  .pr-btn{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-left {
+   
+   
+    width: 85%;
+   
+    border-radius: 1rem;
+   
+  }
+  .contact-right{
+    background: #000000;
+    width: 85%;
+    box-shadow: 0 0 12px 3px black;
+  }
+  .html-imge {
+    width: 32%;
+    height: 4.5rem;
+  }
+}
+
+
+
+@media  (max-width:376px) {
+  .ed-title::before {
+    content: "EDUCATION";
+    z-index: 0;
+    top: -9px !important;
+    left: 2%;
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 3rem !important;
+  }
+  .html-imge {
+    width: 25%;
+    height: 5rem;
+  }
+  .footer {
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+  }
+  .skils-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5rem 1rem;
+  }
+}
+@media screen and (max-width:321px) {
+  .contact-title::before {
+    content: "CONTACT";
+    z-index: 0;
+    top: -10px !important;
+    left: 7%;
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 3rem;
+    display: none;
+  }
+  .ed-title::before {
+    content: "EDUCATION";
+    z-index: 0;
+    top: -9px !important;
+    left: 2%;
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 3rem !important;
+    display: none;
+  }
+  .pr-title::before {
+    content: "MY WORKS";
+    z-index: 0;
+    top: 1rem;
+    left: 5%;
+    position: absolute;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 5rem;
+    display: none;
+  }
+  .card-img-top {
+    border-radius: 0.25rem;
+    object-fit: cover;
+    padding: 1rem;
+    height: 500px;
+  }
+  
+}
